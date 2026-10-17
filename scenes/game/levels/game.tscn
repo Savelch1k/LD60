@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dwk62b44ts8rx"]
+
+[ext_resource type="PackedScene" uid="uid://rxdc61tv5vdw" path="res://scenes/game/levels/main_room.tscn" id="1_erfcp"]
+
+[node name="game" type="Node3D" unique_id=508415441]
+
+[node name="Main_room" parent="." unique_id=1344322583 instance=ExtResource("1_erfcp")]
