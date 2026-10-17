@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://rxdc61tv5vdw"]
+
+[ext_resource type="Script" uid="uid://bv33c8g3wp7cd" path="res://scenes/game/levels/radio_wave_controller.gd" id="1_1bdhh"]
+[ext_resource type="PackedScene" uid="uid://tpou1qya72yg" path="res://assets/models/all_fences/Fences/brick_fence/brick_wall.fbx" id="1_bgmb6"]
+[ext_resource type="PackedScene" uid="uid://cf041s4ykfrj6" path="res://assets/models/all_fences/Fences/brick_fence/brick_Wall_corner.fbx" id="2_le8p0"]
+[ext_resource type="PackedScene" uid="uid://b5cw03y3gf0ae" path="res://assets/models/OFFICE/desks/desk2.glb" id="3_1l316"]
+[ext_resource type="PackedScene" uid="uid://ipscuqbb8c8u" path="res://assets/models/OFFICE/desks/desk2_alt4.glb" id="4_kksag"]
+[ext_resource type="PackedScene" uid="uid://bwo5sumsvmw76" path="res://assets/models/OFFICE/stationary/paper_stack_large.glb" id="5_ged8j"]
+[ext_resource type="PackedScene" uid="uid://b6qv8ubrcmavq" path="res://assets/models/OFFICE/stationary/pen2.glb" id="6_1bdhh"]
+[ext_resource type="PackedScene" uid="uid://ts32ij18pk7f" path="res://assets/models/OFFICE/file_cabinets/file_cabinet_largest.glb" id="7_vreik"]
+[ext_resource type="PackedScene" uid="uid://cs177xjo8x11x" path="res://assets/models/OFFICE/extras/circular_desklamp.fbx" id="8_powx1"]
+[ext_resource type="PackedScene" uid="uid://mh08falxitxi" path="res://assets/models/OFFICE/extras/mug.glb" id="9_i32h2"]
+[ext_resource type="PackedScene" uid="uid://b1ywuqsl4ntla" path="res://assets/models/OFFICE/extras/wall_clock.fbx" id="10_fwbvw"]
+[ext_resource type="PackedScene" uid="uid://dl8xu0l1gmeao" path="res://assets/models/OFFICE/computers/horizontal_desktop.glb" id="11_2c0m7"]
+[ext_resource type="PackedScene" uid="uid://cdth2tvlmd25a" path="res://assets/models/OFFICE/computers/desktop_brick.fbx" id="12_or4l1"]
+[ext_resource type="PackedScene" uid="uid://cik6bkwj4d2mn" path="res://assets/models/OFFICE/computers/computer_tower_alt.glb" id="13_uax3f"]
+[ext_resource type="PackedScene" uid="uid://gmobf33i8ulc" path="res://assets/models/OFFICE/computers/computer_tower.glb" id="14_kbuna"]
+[ext_resource type="PackedScene" uid="uid://otku25h73ds3" path="res://assets/models/OFFICE/chairs/office_chair_orange.fbx" id="15_7utaj"]
+[ext_resource type="PackedScene" uid="uid://b8mltbgc45tmq" path="res://assets/models/OFFICE/book_things/file_binder.fbx" id="16_fe2h2"]
+[ext_resource type="PackedScene" uid="uid://6cw8b7ajrpip" path="res://assets/models/blender/gadget.glb" id="17_kksag"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2jxl5"]
+
+[sub_resource type="Shader" id="Shader_kksag"]
+code = "shader_type spatial;
+
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	// Called for every pixel the material is visible on.
+}
+
+//void light() {
+//	// Called for every pixel for every light affecting the material.
+//	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5dgbc"]
+render_priority = 0
+shader = SubResource("Shader_kksag")
+
+[sub_resource type="BoxMesh" id="BoxMesh_2jxl5"]
+material = SubResource("ShaderMaterial_5dgbc")
+size = Vector3(0.017456055, 0.4852295, 1.2701416)
+
+[sub_resource type="BoxMesh" id="BoxMesh_73tpv"]
+size = Vector3(0.022338867, 0.23327637, 0.42175293)
+
+[sub_resource type="QuadMesh" id="QuadMesh_2jxl5"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_73tpv"]
+
+[node name="Main_room" type="Node3D" unique_id=1344322583]
+script = ExtResource("1_1bdhh")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=320004884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40442696, 1.2662816, -3.1920688)
+keep_aspect = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=78471690]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("PlaneMesh_2jxl5")
+
+[node name="brick_wall" parent="." unique_id=1951689987 instance=ExtResource("1_bgmb6")]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -0.102464676, 0, -4.877384)
+
+[node name="brick_wall7" parent="." unique_id=1873084981 instance=ExtResource("1_bgmb6")]
+transform = Transform3D(0.0003429214, 0, 0.99999994, 0, 1.5, 0, -0.99999994, 0, 0.0003429214, -5.0895014, 0, 0.123411655)
+
+[node name="brick_wall8" parent="." unique_id=1736348564 instance=ExtResource("1_bgmb6")]
+transform = Transform3D(0.0003429214, 0, 0.99999994, 0, 1.5, 0, -0.99999994, 0, 0.0003429214, -5.0892467, 0, 4.118475)
+
+[node name="brick_Wall_corner4" parent="." unique_id=217815934 instance=ExtResource("2_le8p0")]
+transform = Transform3D(0.99999994, 0, -0.00034296513, 0, 1.5, 0, 0.00034296513, 0, 0.99999994, -5.0870886, 0, 5.113043)
+
+[node name="brick_Wall_corner" parent="." unique_id=1004761379 instance=ExtResource("2_le8p0")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1.5, 0, 1.509958e-07, 0, -1, 4.892713, 0, -4.878601)
+
+[node name="brick_wall2" parent="." unique_id=2082014015 instance=ExtResource("1_bgmb6")]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -4.0975275, 0, -4.875759)
+
+[node name="brick_Wall_corner2" parent="." unique_id=1329304089 instance=ExtResource("2_le8p0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.5, 0, 1, 0, -4.371139e-08, -5.092095, 0, -4.873261)
+
+[node name="brick_wall3" parent="." unique_id=1724142902 instance=ExtResource("1_bgmb6")]
+transform = Transform3D(-1, 0, 0.00010386308, 0, 1.5, 0, -0.00010386308, 0, -1, -0.08951187, 0, 5.1067705)
+
+[node name="brick_wall4" parent="." unique_id=1097553023 instance=ExtResource("1_bgmb6")]
+transform = Transform3D(-1, 0, 0.00010386308, 0, 1.5, 0, -0.00010386308, 0, -1, 3.905551, 0, 5.1055603)
+
+[node name="brick_Wall_corner3" parent="." unique_id=1835075076 instance=ExtResource("2_le8p0")]
+transform = Transform3D(0.00010390679, 0, 1, 0, 1.5, 0, -1, 0, 0.00010390679, 4.900119, 0, 5.103165)
+
+[node name="brick_wall5" parent="." unique_id=2126835056 instance=ExtResource("1_bgmb6")]
+transform = Transform3D(-0.00027291375, 0, -0.9999999, 0, 1.5, 0, 0.9999999, 0, -0.00027291375, 4.891396, 0, 0.10081744)
+
+[node name="brick_wall6" parent="." unique_id=1770423142 instance=ExtResource("1_bgmb6")]
+transform = Transform3D(-0.00027291375, 0, -0.9999999, 0, 1.5, 0, 0.9999999, 0, -0.00027291375, 4.890862, 0, -3.8942454)
+
+[node name="desk22" parent="." unique_id=2100887549 instance=ExtResource("3_1l316")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42438528, 0, -4.225054)
+
+[node name="desk2_alt42" parent="." unique_id=1136542429 instance=ExtResource("4_kksag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6233394, 0, -4.2315855)
+
+[node name="desk2_alt43" parent="." unique_id=813122251 instance=ExtResource("4_kksag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7772353, 0, -4.2299385)
+
+[node name="paper_stack_large2" parent="." unique_id=91488943 instance=ExtResource("5_ged8j")]
+transform = Transform3D(0.94227976, 0, 0.33482665, 0, 1, 0, -0.33482665, 0, 0.94227976, -1.142796, 0.9084703, -4.0221148)
+
+[node name="pen22" parent="." unique_id=244234802 instance=ExtResource("6_1bdhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8133504, 0.90836525, -3.9820595)
+
+[node name="file_cabinet_largest2" parent="." unique_id=1641642584 instance=ExtResource("7_vreik")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0573363, 0, -4.3250175)
+
+[node name="circular_desklamp" parent="." unique_id=1035428477 instance=ExtResource("8_powx1")]
+transform = Transform3D(0.3021586, 0, 0.9532577, 0, 1, 0, -0.9532577, 0, 0.3021586, -1.4751692, 0.8966379, -4.107843)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="circular_desklamp" unique_id=1681808837]
+transform = Transform3D(0.56074154, 0.8269466, 0.041573554, 0.37412393, -0.29784125, 0.8782493, 0.7386476, -0.4769173, -0.47639245, -0.013333321, 0.2756542, 0.18108726)
+
+[node name="mug2" parent="." unique_id=1911493046 instance=ExtResource("9_i32h2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6534991, 0.89647985, -3.8697505)
+
+[node name="wall_clock" parent="." unique_id=1315554236 instance=ExtResource("10_fwbvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3320432, 1.770073, -4.732641)
+
+[node name="horizontal_desktop2" parent="." unique_id=883526696 instance=ExtResource("11_2c0m7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42244282, 0.9006374, -4.483013)
+
+[node name="desktop_brick" parent="." unique_id=1703121109 instance=ExtResource("12_or4l1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36646897, 0.9060222, -4.3841214)
+
+[node name="computer_tower_alt2" parent="." unique_id=1400044668 instance=ExtResource("13_uax3f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9449218, 0.90110636, -4.4537373)
+
+[node name="computer_tower2" parent="." unique_id=566940584 instance=ExtResource("14_kbuna")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88189864, 0.89684296, -4.462449)
+
+[node name="office_chair_orange" parent="." unique_id=430424912 instance=ExtResource("15_7utaj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4387651, 0, -3.6189685)
+
+[node name="file_binder" parent="." unique_id=1021093997 instance=ExtResource("16_fe2h2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.067073, 0.95884824, -4.6142426)
+
+[node name="gadget" parent="." unique_id=918912432 instance=ExtResource("17_kksag")]
+transform = Transform3D(-1.5517543e-08, 0, -0.355, 0, 0.355, 0, 0.355, 0, -1.5517543e-08, -0.40905774, 1.1305865, -4.389618)
+
+[node name="screen1" type="MeshInstance3D" parent="gadget" unique_id=1810862481]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0.28431988, 0.6476753, 0.0007921457)
+visible = false
+mesh = SubResource("BoxMesh_2jxl5")
+
+[node name="screen2" type="MeshInstance3D" parent="gadget" unique_id=1941937742]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0.2801237, 0.22857666, 0.42907834)
+visible = false
+mesh = SubResource("BoxMesh_73tpv")
+
+[node name="WaveScreen1" type="MeshInstance3D" parent="gadget" unique_id=239544734]
+transform = Transform3D(-5.616913e-08, 0, 1, 0, 0.5, 0, -1.285, 0, -4.371139e-08, 0.29543495, 0.6467316, -4.7683716e-07)
+mesh = SubResource("QuadMesh_2jxl5")
+
+[node name="WaveScreen2" type="MeshInstance3D" parent="gadget" unique_id=1149220082]
+transform = Transform3D(-1.8795898e-08, 0, 1.0000001, 0, 0.24500002, 0, -0.43000004, 0, -4.3711392e-08, 0.29499912, 0.22858906, 0.4299277)
+mesh = SubResource("QuadMesh_73tpv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1173421785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.3899307, 0)
+light_color = Color(1, 1, 0.80784315, 1)
+light_energy = 0.2
